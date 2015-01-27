@@ -1,0 +1,22 @@
+#N canvas 934 173 450 300 10;
+#X obj 76 135 osc~;
+#X obj 198 134 osc~;
+#X obj 123 241 dac~;
+#X obj 127 135 print a;
+#X obj 255 132 print b;
+#X obj 188 81 * 600;
+#X obj 93 81 * 400;
+#X floatatom 149 34 5 0 0 0 - - -;
+#X text 196 29 change this number to make the pitch higher or lower
+;
+#X obj 131 197 *~ 0.5;
+#X connect 0 0 9 0;
+#X connect 1 0 9 0;
+#X connect 5 0 1 0;
+#X connect 5 0 4 0;
+#X connect 6 0 0 0;
+#X connect 6 0 3 0;
+#X connect 7 0 6 0;
+#X connect 7 0 5 0;
+#X connect 9 0 2 0;
+#X connect 9 0 2 1;

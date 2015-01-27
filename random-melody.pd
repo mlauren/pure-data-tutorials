@@ -1,0 +1,18 @@
+#N canvas 949 391 450 300 10;
+#X obj 152 24 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 130 63 random 800;
+#X obj 144 104 + 200;
+#X floatatom 144 143 5 0 0 0 - - -;
+#X obj 144 178 osc~;
+#X obj 139 210 *~ 0.7;
+#X obj 144 245 dac~;
+#X text 182 18 Every bang you send will generate a pitch between 200
+and 1000 Hertz – a random melody.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 0 6 1;

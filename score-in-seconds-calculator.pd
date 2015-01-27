@@ -1,0 +1,8 @@
+#N canvas 870 323 450 300 10;
+#X obj 101 108 expr ($f1/$f2)*60;
+#X floatatom 200 49 5 0 0 0 - - -;
+#X floatatom 101 49 5 0 0 0 - - -;
+#X floatatom 134 171 5 0 0 0 - - -;
+#X connect 0 0 3 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;

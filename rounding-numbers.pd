@@ -1,0 +1,10 @@
+#N canvas 831 324 450 300 10;
+#X floatatom 113 63 5 0 0 0 - - -;
+#X obj 106 108 + 0.5;
+#X obj 120 139 div;
+#X floatatom 123 185 5 0 0 0 - - -;
+#X text 164 61 number to be rounded;
+#X text 168 182 Result;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;

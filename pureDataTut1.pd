@@ -1,0 +1,23 @@
+#N canvas 736 239 743 661 10;
+#X floatatom 250 242 5 0 0 0 - - -;
+#X obj 256 270 osc~ 440;
+#X obj 270 458 dac~;
+#X obj 258 408 *~ 0;
+#X msg 291 376 0;
+#X msg 335 374 1;
+#X text 270 298 large strings controll signal connection;
+#X text 320 274 here osc is the signal name \, and the argument is
+440;
+#X text 374 371 I think this acts as a switch;
+#X text 295 234 small strings controll data connection \, which I think
+can alter the argument of something its attached to;
+#X text 89 278 a sound is generated here;
+#X text 93 241 I enter a frequency here;
+#X text 28 461 the sound is sent to the speaker here;
+#X msg 364 426;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X connect 3 0 2 1;
+#X connect 4 0 3 1;
+#X connect 5 0 3 1;

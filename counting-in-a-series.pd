@@ -1,0 +1,16 @@
+#N canvas 952 381 450 300 10;
+#X obj 166 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 168 200 5 0 0 0 - - -;
+#X obj 168 164 mod 7;
+#X msg 214 50 0;
+#X obj 173 96 f;
+#X obj 167 132 + 1;
+#X text 206 95 counts up to add assign this number to the next number
+as long as it under 7;
+#X connect 0 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 1;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X connect 5 0 4 1;
