@@ -1,13 +1,54 @@
 #N canvas 550 45 1079 847 10;
-#X msg 352 149 440 \, 880 2000;
-#X obj 352 181 line;
-#X floatatom 352 210 5 0 0 0 - - -;
-#X obj 353 241 osc~;
-#X obj 371 284 *~;
-#X obj 400 257 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X msg 119 152 440 \, 880 2000;
+#X obj 119 184 line;
+#X floatatom 119 213 5 0 0 0 - - -;
+#X obj 120 244 osc~;
+#X obj 138 287 *~;
+#X obj 167 260 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 362 323 dac~;
-#X text 333 124 GLISSANDO;
+#X obj 129 326 dac~;
+#X text 100 127 GLISSANDO;
+#X text 349 78 Automatic Random Melody;
+#X obj 361 112 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 356 185 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 360 213 random 1000;
+#X floatatom 359 239 5 0 0 0 - - -;
+#X obj 360 263 osc~;
+#X obj 362 316 *~;
+#X obj 354 351 dac~;
+#X obj 378 292 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 355 148 metro 1000;
+#X text 427 109 turns on the metronome that controls the duration of
+the bang being switched;
+#X text 673 75 Irregular random rhythms;
+#X obj 721 110 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 729 141 metro 500;
+#X obj 768 111 random 1000;
+#X obj 726 177 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 853 191 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 852 245 metro 500;
+#X obj 903 188 random 1000;
+#X obj 849 281 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 861 153 you can add this to a melody to switch it up;
+#X floatatom 847 345 5 0 0 0 - - -;
+#X obj 840 431 osc~;
+#X obj 842 484 *~;
+#X obj 834 519 dac~;
+#X obj 858 460 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 832 368 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 7700 1;
+#X obj 840 316 random 127;
+#X obj 836 400 + 300;
+#X text 661 359 graphic representation of where the random thning is
+;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -15,3 +56,29 @@
 #X connect 4 0 6 0;
 #X connect 4 0 6 1;
 #X connect 5 0 4 1;
+#X connect 9 0 17 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 14 0 15 1;
+#X connect 16 0 14 1;
+#X connect 17 0 10 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
+#X connect 21 0 23 0;
+#X connect 22 0 21 1;
+#X connect 24 0 25 0;
+#X connect 25 0 26 0;
+#X connect 25 0 27 0;
+#X connect 26 0 25 1;
+#X connect 27 0 35 0;
+#X connect 29 0 34 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 31 0 32 1;
+#X connect 33 0 31 1;
+#X connect 34 0 36 0;
+#X connect 35 0 29 0;
+#X connect 36 0 30 0;

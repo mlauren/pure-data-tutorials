@@ -27,8 +27,8 @@
 #X obj 443 497 dac~;
 #X obj 403 319 + 400;
 #X text 482 323;
-#X obj 506 267 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5700 1;
+#X obj 526 268 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 12700 1;
 #X floatatom 550 292 5 0 0 0 - - -;
 #X obj 549 319 + 200;
 #X text 137 230 Slider represents a number ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
