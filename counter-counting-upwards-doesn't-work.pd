@@ -1,0 +1,72 @@
+#N canvas 907 23 899 936 10;
+#X floatatom 133 281 5 0 0 0 - - -;
+#X obj 134 333 sel 17;
+#X obj 185 372 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 207 153 0;
+#X msg 170 154 1;
+#X obj 162 180 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 146 56 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 71 117 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 127 206 spigot;
+#X obj 126 142 float;
+#X obj 127 170 + 1;
+#X msg 145 107 9;
+#X obj 228 331 print;
+#X obj 99 248 t b f;
+#X text 240 111 COUNTER EXAMPLE doesn't work for me! hmmmm;
+#X floatatom 447 446 5 0 0 0 - - -;
+#X obj 564 413 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 512 340 0;
+#X msg 484 319 1;
+#X obj 476 345 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 460 232 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 385 282 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 444 386 spigot;
+#X obj 440 307 float;
+#X obj 441 335 + 1;
+#X msg 459 283 9;
+#X obj 497 475 print;
+#X obj 413 413 t b f;
+#X obj 433 360 mod 17;
+#X text 554 276 This works.... kind of... generates random numbers
+;
+#X connect 0 0 1 0;
+#X connect 0 0 12 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 5 0;
+#X connect 5 0 8 1;
+#X connect 6 0 11 0;
+#X connect 6 0 4 0;
+#X connect 7 0 9 0;
+#X connect 8 0 13 0;
+#X connect 9 0 10 0;
+#X connect 10 0 8 0;
+#X connect 11 0 0 0;
+#X connect 13 0 7 0;
+#X connect 13 1 0 0;
+#X connect 15 0 26 0;
+#X connect 16 0 17 0;
+#X connect 17 0 19 0;
+#X connect 18 0 19 0;
+#X connect 19 0 22 1;
+#X connect 20 0 18 0;
+#X connect 20 0 25 0;
+#X connect 21 0 23 0;
+#X connect 22 0 27 0;
+#X connect 23 0 24 0;
+#X connect 24 0 23 1;
+#X connect 24 0 28 0;
+#X connect 25 0 23 1;
+#X connect 27 0 21 0;
+#X connect 27 1 15 0;
+#X connect 28 0 22 0;

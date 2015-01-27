@@ -1,0 +1,98 @@
+#N canvas 804 23 955 934 10;
+#X symbolatom 127 103 10 0 0 0 - - -;
+#X obj 137 137 sel maria;
+#X obj 269 136 sel maria;
+#X msg 267 101 maria;
+#X obj 138 177 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 275 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 130 63 symbol box (CANT GET TO WORK);
+#X obj 112 312 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8600 1;
+#X obj 195 341 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 9300 1;
+#X floatatom 212 289 5 0 0 0 - - -;
+#X floatatom 112 280 5 0 0 0 - - -;
+#X floatatom 228 407 5 0 0 0 - - -;
+#X text 257 290 input;
+#X text 270 405 output;
+#X obj 360 267 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 5700 1;
+#X floatatom 404 292 5 0 0 0 - - -;
+#X obj 430 423 osc~;
+#X obj 443 465 *~;
+#X obj 564 491 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+6;
+#X obj 443 497 dac~;
+#X obj 403 319 + 400;
+#X text 482 323;
+#X obj 506 267 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 5700 1;
+#X floatatom 550 292 5 0 0 0 - - -;
+#X obj 549 319 + 200;
+#X text 137 230 Slider represents a number ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;
+#X obj 111 533 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2700 1;
+#X obj 107 585 + 400;
+#X floatatom 108 561 5 0 0 0 - - -;
+#X floatatom 108 610 5 0 0 0 - - -;
+#X obj 107 636 osc~;
+#X obj 124 731 *~;
+#X floatatom 186 657 5 0 0 0 - - -;
+#X obj 186 631 / 6;
+#X floatatom 185 602 5 0 0 0 - - -;
+#X obj 182 577 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 166 700 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+0.166667;
+#X obj 121 766 dac~;
+#X text 194 693 the number coming from the radio slider also acts as
+an input into the switch;
+#X obj 431 606 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 10400 1;
+#X floatatom 486 641 5 0 0 0 - - -;
+#X obj 593 744 * 8;
+#X obj 628 603 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 10200 1;
+#X floatatom 683 638 5 0 0 0 - - -;
+#X obj 547 699 trigger float float;
+#X floatatom 593 792 5 0 0 0 - - -;
+#X text 673 692 floats the numbers coming from the bang;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 8 0 11 0;
+#X connect 9 0 8 0;
+#X connect 10 0 7 0;
+#X connect 14 0 15 0;
+#X connect 15 0 20 0;
+#X connect 16 0 17 0;
+#X connect 17 0 19 0;
+#X connect 17 0 19 1;
+#X connect 18 0 17 1;
+#X connect 20 0 16 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
+#X connect 24 0 16 0;
+#X connect 26 0 28 0;
+#X connect 27 0 29 0;
+#X connect 28 0 27 0;
+#X connect 29 0 30 0;
+#X connect 30 0 31 0;
+#X connect 31 0 37 0;
+#X connect 31 0 37 1;
+#X connect 32 0 36 0;
+#X connect 33 0 32 0;
+#X connect 34 0 33 0;
+#X connect 35 0 34 0;
+#X connect 36 0 31 1;
+#X connect 39 0 40 0;
+#X connect 40 0 44 0;
+#X connect 41 0 45 0;
+#X connect 42 0 43 0;
+#X connect 43 0 44 0;
+#X connect 44 0 41 0;
+#X connect 44 1 41 0;

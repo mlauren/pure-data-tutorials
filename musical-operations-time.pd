@@ -1,0 +1,17 @@
+#N canvas 550 45 1079 847 10;
+#X msg 352 149 440 \, 880 2000;
+#X obj 352 181 line;
+#X floatatom 352 210 5 0 0 0 - - -;
+#X obj 353 241 osc~;
+#X obj 371 284 *~;
+#X obj 400 257 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 362 323 dac~;
+#X text 333 124 GLISSANDO;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 4 0 6 1;
+#X connect 5 0 4 1;

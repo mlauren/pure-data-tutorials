@@ -1,0 +1,84 @@
+#N canvas 795 23 971 932 10;
+#X obj 99 84 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X text 136 23 TIME OPERATIONS;
+#X obj 103 117 metro 500;
+#X obj 91 162 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 159 85 5 0 0 0 - - -;
+#X text 164 156 metronome "metro 500" -- the second value is miliseconds
+this is for a bang every 1/2 second bangs occur at the regular interval
+that is determined by the argument or the right input;
+#X obj 77 331 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 68 364 delay 2000;
+#X text 143 361 delay 2 seconds;
+#X obj 86 403 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 52 258 DELAY & PIPE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+;
+#X obj 323 363 pipe 500;
+#X floatatom 314 329 5 0 0 0 - - -;
+#X floatatom 319 405 5 0 0 0 - - -;
+#X text 259 297 "pipe" acheives the same thing as delay without bangs
+;
+#X obj 514 368 pipe s 500;
+#X msg 506 327 symbol hallooo;
+#X symbolatom 517 409 10 0 0 0 - - -;
+#X text 604 354 if you want to have a symbol switch through use the
+s or symbol argument;
+#X floatatom 180 540 5 0 0 0 - - -;
+#X floatatom 219 539 5 0 0 0 - - -;
+#X floatatom 256 539 5 0 0 0 - - -;
+#X obj 173 497 pipe float float float 1000;
+#X obj 217 454 + 1;
+#X obj 277 456 + 2;
+#X msg 188 416 2;
+#X obj 60 679 line;
+#X floatatom 53 737 5 0 0 0 - - -;
+#X msg 59 638 1500 4000;
+#X text 129 635 go to 1500 in 4 seconds;
+#X text 57 586 LINE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~;
+#X text 314 581 Timer ~~~~~~~~~~~~~~~~~~~~~~~~~;
+#X obj 321 629 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 352 645 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 323 672 timer;
+#X floatatom 324 709 5 0 0 0 - - -;
+#X text 345 624 if you click here first;
+#X text 376 643 and then click here;
+#X text 365 708 than this duration appears here;
+#X obj 607 622 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 597 652 trigger bang bang;
+#X obj 622 690 timer;
+#X floatatom 626 728 5 0 0 0 - - -;
+#X text 678 701 the duration between two bangs inside of a trigger
+is 0;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 4 0 2 1;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 11 0 13 0;
+#X connect 12 0 11 0;
+#X connect 15 0 17 0;
+#X connect 16 0 15 0;
+#X connect 22 0 19 0;
+#X connect 22 1 20 0;
+#X connect 22 2 21 0;
+#X connect 23 0 22 1;
+#X connect 24 0 22 2;
+#X connect 25 0 22 0;
+#X connect 25 0 23 0;
+#X connect 25 0 24 0;
+#X connect 26 0 27 0;
+#X connect 28 0 26 0;
+#X connect 32 0 34 0;
+#X connect 33 0 34 1;
+#X connect 34 0 35 0;
+#X connect 39 0 40 0;
+#X connect 40 0 41 1;
+#X connect 40 1 41 0;
+#X connect 41 0 42 0;

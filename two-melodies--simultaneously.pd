@@ -1,0 +1,17 @@
+#N canvas 604 305 450 300 10;
+#X obj 156 24 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 106 89 random 800;
+#X obj 180 89 random 600;
+#X obj 153 129 osc~;
+#X obj 125 55 trigger bang bang;
+#X obj 146 161 *~ 0.5;
+#X obj 149 211 dac~;
+#X connect 0 0 4 0;
+#X connect 1 0 3 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 1 0;
+#X connect 4 1 2 0;
+#X connect 5 0 6 0;
+#X connect 5 0 6 1;
