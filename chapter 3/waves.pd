@@ -1,0 +1,244 @@
+#N canvas 1 23 1914 893 10;
+#X msg 94 67 1 \, 50 30000;
+#X obj 94 95 line;
+#X floatatom 106 147 5 0 0 0 - - -;
+#X obj 106 174 phasor~;
+#X obj 106 202 *~ 0.7;
+#X obj 106 230 dac~;
+#X text 94 41 PERIOTIC VIBRATIONS;
+#X msg 79 293 440;
+#X msg 123 293 880;
+#X text 211 113 the range is percieved as a rythem until it reaches
+a point where my human ears can hear it "After a certain speed (over
+20 clicks per second) \, our perception 'shifts gears' and begins to
+hear a low pitch";
+#X obj 79 321 osc~;
+#X obj 79 349 *~ 0.7;
+#X obj 79 377 dac~;
+#X obj 134 349 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 170 175 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 173 320 A4 to A5 440 Hz to 880 Hz;
+#X text 173 371 when a given frequency is doubled \, we perceive this
+as an octave leap;
+#X text 106 451 If we want to hear an octave above 880 Hz \, we have
+to double it again. 880 + 880 = 1760:;
+#X msg 136 490 440;
+#X msg 180 490 880;
+#X obj 136 518 osc~;
+#X obj 122 585 *~ 0.7;
+#X obj 122 613 dac~;
+#X obj 169 561 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 224 490 1760;
+#X msg 106 490 220;
+#X msg 71 736 100;
+#X msg 113 736 200;
+#X msg 151 736 300;
+#X msg 186 736 400;
+#X msg 224 736 500;
+#X msg 259 736 600;
+#X msg 292 736 700;
+#X msg 328 736 800;
+#X obj 192 812 osc~;
+#X obj 192 840 *~ 0.7;
+#X obj 192 868 dac~;
+#X text 71 658 You hear an octave from 100 to 200 \, a fifth from 200
+to 300 \, a fourth from 300 to 400 \, etc. In mathematics \, this is
+an additive process in which the same amount is added each time. Our
+ears \, however \, perceive that this amount gets smaller and smaller
+with every step;
+#X obj 251 812 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 604 42 5 0 0 0 - - -;
+#X floatatom 608 812 5 0 0 0 - - -;
+#X floatatom 669 67 5 0 0 0 - - -;
+#X obj 669 94 ftom;
+#X text 719 119 ftom - "frequency to midi";
+#X floatatom 669 147 5 0 0 0 - - -;
+#X text 719 94 Frequency;
+#X text 719 144 midi number;
+#X floatatom 887 67 5 0 0 0 - - -;
+#X obj 887 94 mtof;
+#X text 926 94 midi to frequency;
+#X floatatom 887 147 5 0 0 0 - - -;
+#X floatatom 691 239 5 0 0 0 - - -;
+#X obj 693 264 osc~;
+#X obj 651 329 *~ 0.7;
+#X obj 658 356 dac~;
+#X obj 726 334 snapshot~;
+#X floatatom 731 369 5 0 0 0 - - -;
+#X obj 738 297 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 688 307 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 749 228 The "osc~" object's outlet is constantly sending signals
+\, i.e. \, numbers between -1 and 1 \, 44100 per second this to;
+#X floatatom 855 319 5 0 0 0 - - -;
+#X obj 857 344 osc~;
+#X obj 815 409 *~ 0.7;
+#X obj 822 436 dac~;
+#X obj 890 414 snapshot~;
+#X floatatom 895 449 5 0 0 0 - - -;
+#X obj 943 366 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 852 387 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 913 308;
+#X obj 943 341 metro 50;
+#X obj 942 311 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 1079 284 5 0 0 0 - - -;
+#X obj 1081 309 osc~;
+#X obj 1039 374 *~ 0.7;
+#X obj 1046 401 dac~;
+#X floatatom 1127 409 5 0 0 0 - - -;
+#X obj 1076 352 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 1114 379 unsig~ 50;
+#X text 1009 431 in PD extended you can use unsig to automatically
+connect a metronome;
+#X obj 695 468 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 685 496 metro 500;
+#X obj 648 529 trigger bang bang;
+#X obj 661 557 random 20;
+#X obj 667 586 + 70;
+#X floatatom 667 614 5 0 0 0 - - -;
+#X obj 668 642 + 0;
+#X obj 782 578 random;
+#X obj 815 553 line;
+#X msg 815 525 0 \, 100 30000;
+#X obj 782 603 / 100;
+#X floatatom 670 676 5 0 0 0 - - -;
+#X obj 671 706 mtof;
+#X obj 671 730 osc~;
+#X obj 671 759 *~ 0.7;
+#X obj 663 791 dac~;
+#X floatatom 739 726 5 0 0 0 - - -;
+#X obj 717 733 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 814 503 then initiate detuning here;
+#X floatatom 1275 41 5 0 0 0 - - -;
+#X floatatom 1279 811 5 0 0 0 - - -;
+#X text 726 639 random midi values are gradually offset Transition
+from equal tempered tuning to random tuning;
+#X obj 1055 496 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 1045 524 metro 500;
+#X obj 1021 585 random 20;
+#X obj 1027 614 + 70;
+#X floatatom 1027 642 5 0 0 0 - - -;
+#X obj 1028 670 + 0;
+#X floatatom 1030 704 5 0 0 0 - - -;
+#X obj 1031 734 mtof;
+#X obj 1031 758 osc~;
+#X obj 1031 787 *~ 0.7;
+#X obj 1023 819 dac~;
+#X floatatom 1099 754 5 0 0 0 - - -;
+#X obj 1077 761 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X text 1086 667;
+#X obj 1008 557 trigger bang;
+#X obj 1389 132 metro 500;
+#X obj 1384 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 1372 163 trigger bang bang;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 5 1;
+#X connect 7 0 10 0;
+#X connect 8 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 11 0 12 1;
+#X connect 13 0 11 1;
+#X connect 14 0 4 1;
+#X connect 18 0 20 0;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
+#X connect 21 0 22 1;
+#X connect 23 0 21 1;
+#X connect 24 0 20 0;
+#X connect 25 0 20 0;
+#X connect 26 0 34 0;
+#X connect 27 0 34 0;
+#X connect 28 0 34 0;
+#X connect 29 0 34 0;
+#X connect 30 0 34 0;
+#X connect 31 0 34 0;
+#X connect 32 0 34 0;
+#X connect 33 0 34 0;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 35 0 36 1;
+#X connect 38 0 35 1;
+#X connect 39 0 40 0;
+#X connect 41 0 42 0;
+#X connect 42 0 44 0;
+#X connect 47 0 48 0;
+#X connect 48 0 50 0;
+#X connect 51 0 52 0;
+#X connect 52 0 53 0;
+#X connect 52 0 55 0;
+#X connect 53 0 54 0;
+#X connect 53 0 54 1;
+#X connect 55 0 56 0;
+#X connect 57 0 55 0;
+#X connect 58 0 53 1;
+#X connect 60 0 61 0;
+#X connect 61 0 62 0;
+#X connect 61 0 64 0;
+#X connect 62 0 63 0;
+#X connect 62 0 63 1;
+#X connect 64 0 65 0;
+#X connect 66 0 64 0;
+#X connect 67 0 62 1;
+#X connect 69 0 66 0;
+#X connect 70 0 69 0;
+#X connect 71 0 72 0;
+#X connect 72 0 73 0;
+#X connect 72 0 77 0;
+#X connect 73 0 74 0;
+#X connect 73 0 74 1;
+#X connect 76 0 73 1;
+#X connect 77 0 75 0;
+#X connect 79 0 80 0;
+#X connect 80 0 81 0;
+#X connect 81 0 82 0;
+#X connect 81 1 86 0;
+#X connect 82 0 83 0;
+#X connect 83 0 84 0;
+#X connect 84 0 85 0;
+#X connect 85 0 90 0;
+#X connect 86 0 89 0;
+#X connect 87 0 86 1;
+#X connect 88 0 87 0;
+#X connect 89 0 85 1;
+#X connect 90 0 91 0;
+#X connect 91 0 92 0;
+#X connect 91 0 95 0;
+#X connect 92 0 93 0;
+#X connect 93 0 94 0;
+#X connect 93 0 94 1;
+#X connect 96 0 93 1;
+#X connect 98 0 99 0;
+#X connect 101 0 102 0;
+#X connect 102 0 115 0;
+#X connect 103 0 104 0;
+#X connect 104 0 105 0;
+#X connect 105 0 106 0;
+#X connect 106 0 107 0;
+#X connect 107 0 108 0;
+#X connect 108 0 109 0;
+#X connect 108 0 112 0;
+#X connect 109 0 110 0;
+#X connect 110 0 111 0;
+#X connect 110 0 111 1;
+#X connect 113 0 110 1;
+#X connect 115 0 103 0;
