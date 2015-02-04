@@ -1,0 +1,30 @@
+#N canvas 565 53 1197 955 10;
+#X obj 117 102 adc~;
+#X text 102 81 audio input;
+#X obj 128 380 *~;
+#X obj 166 362 line~;
+#X obj 167 174 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 167 310 5 0 0 0 - - -;
+#X obj 291 316 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 119 417 dac~;
+#X obj 290 254 env~ 128;
+#X msg 165 338 \$1 20;
+#X obj 290 280 - 100;
+#X obj 176 126 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 564 73 OSCILLATOR;
+#X text 58 55 Processing adc-input;
+#X connect 0 0 2 0;
+#X connect 0 0 8 0;
+#X connect 0 1 2 0;
+#X connect 0 1 8 0;
+#X connect 2 0 7 0;
+#X connect 2 0 7 1;
+#X connect 3 0 2 1;
+#X connect 4 0 5 0;
+#X connect 5 0 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 3 0;
+#X connect 10 0 6 0;
+#X connect 11 0 4 0;
